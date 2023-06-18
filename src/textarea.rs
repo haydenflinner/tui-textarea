@@ -21,7 +21,7 @@ use crate::word::{find_word_end_forward, find_word_start_backward};
 /// ```
 /// use tui_textarea::{TextArea, Input, Key};
 ///
-/// let mut textarea = TextArea::default();
+/// let mut textarea = TextArea::default();:
 ///
 /// // Input 'a'
 /// let input = Input { key: Key::Char('a'), ctrl: false, alt: false };
@@ -1019,7 +1019,7 @@ impl<'a> TextArea<'a> {
     ///     // ...
     /// }
     /// ```
-    pub fn widget(&'a self) -> impl Widget + 'a {
+    pub fn widget(&'a self) -> Renderer<'a> {
         Renderer::new(self)
     }
 
